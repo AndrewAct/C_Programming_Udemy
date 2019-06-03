@@ -1,0 +1,746 @@
+/*
+****Command and Line Arguments****
+
+#include <stdio.h>
+
+int main(int argc, char *argv[]) 
+{
+	int numberOfArguments = argc;
+	char *argument1= argv[0];
+	char *argument2= argv[1];
+	
+	printf("Number of Arguments: %d\n", numberOfArguments);
+	printf("Argument 1 is the program name: %s\n", argument1);
+	printf("Argument 2 is the command line argument :%s\n", argument2);
+	
+	return 0;
+	
+}
+*/
+
+/*
+(Challenge) Print Area of A Rectangle
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[]) 
+{
+	double width = 32.3;
+	double height = 15.3;
+	double perimeter = 0.0;
+	double area = 0.0;
+	
+	perimeter = 2.0*(height+ width);
+	area= height * width;
+	
+	printf ("Perimeter is %f\n", perimeter);
+	printf ("Area is %f\n", area);
+}
+*/
+
+/*
+(Challenge) Use Enum Type
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() 
+{
+	enum Company { GOOGLE, FACEBOOK, XEROX, YAHOO, EBAY, MICROSOFT };
+	enum Company xerox = XEROX;
+	enum Company google = GOOGLE;
+		
+	printf ("The value of xerox is: %d\n", xerox);
+	printf ("The value of google is : %d\n", google);
+		
+	return 0;
+}
+
+*/
+
+/* 
+Basic Operator
+algorithmetic, logical, assignment and relational 
+
+
+#include <stdio.h>
+int main()
+{
+	int a = 12;
+	int b = 20;
+	int c= a+b;
+	printf ("The value of c is: %d",c);
+	return 0;
+}
+*/
+
+/*
+Bitwise Operation
+
+#include <stdio.h>
+int main()
+{
+	unsigned int a = 60;
+	unsigned int b = 13;
+	int result = 0;
+	
+	result = a|b;
+	printf ("result is %d", result);
+}
+*/
+
+/*
+Cast and Sizeof
+*/
+ 
+/*
+(Challenge) Convert minutes to years
+
+#include <stdio.h>
+int main()
+{
+	int minutesEntered = 0;
+	double years = 0.0;
+	double days = 0.0;
+	double minutesInYear = 0;
+	
+	printf ("Please enter the number of minutes:");
+	//get input from user
+	scanf("%d",&minutesEntered);
+	minutesInYear = (60*24*365);
+	years = (minutesEntered/ minutesInYear);
+	days= ((minutesEntered/60.0) /24.0);
+	
+	printf  ("%d minutes is approximately %f years and %f days \n", minutesEntered,years, days);
+}
+*/
+
+/*
+(Challenge) Print the byte size
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() 
+{
+	printf ("Variables of type char occupy %zd \n",sizeof(char));
+	printf ("Variables of type short occupy %zd \n",sizeof(short));
+	printf ("Variables of type int occupy %zd \n",sizeof(int));
+	printf ("Variables of type long occupy %zd \n",sizeof(long));
+	printf ("Variables of type long long occupy %zd \n",sizeof(long long));
+	printf ("Variables of type float occupy %zd \n",sizeof(float));
+	printf ("Variables of type double occupy %zd \n",sizeof(double));
+	printf ("Variables of type long double occupy %zd \n",sizeof(long double));
+	return 0;
+}
+
+*/
+
+/*
+Decision Making
+
+#include <stdio.h>
+int main(void)
+{
+	int number, sign;
+	printf ("Please type in a number:");
+	scanf ("%i",&number);
+	
+	if (number < 0)
+		sign = -1;
+	else if (number == 0)
+		sign = 0;
+	else 
+		sign = 1;
+		
+	printf ("Sign= %i\n",sign);
+	return 0; 
+}
+*/
+
+/*
+Switch Case
+
+#include <stdio.h>
+
+int main ()
+{
+	enum Weekday {Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday};
+	enum Weekday today = Monday;
+	switch (today)
+	{
+		case Sunday:
+		printf ("Today is Sunday.");
+		break;
+		case Monday:
+		printf ("Today is Monday.");
+		break;
+		case Tuesday:
+		printf ("Today is Tuesday.");
+		break;
+		default:
+			printf ("Whatever");
+			break;
+	}
+	return 0;
+}
+ */
+
+/*
+(Challenge) Calculate the pay
+
+#include <stdio.h>
+#include <stdlib.h>
+
+#define PAYRATE 12.00
+#define TAXRATE_300 0.15
+#define TAXRATE_150 0.20
+#define TAXRATE_REST 0.25
+#define OVERTIME 40
+
+int main ()
+{
+	int hours = 0;
+	double grossPay = 0.0;
+	double taxes = 0.0;
+	double netPay = 0.0;
+	
+	printf ("Please enter the number of hours worked this week:");
+	
+	//get the input
+	scanf ("%d", &hours);
+	
+	//v=calculate the gross pay
+	if (hours<= 40)
+	grossPay = hours * PAYRATE;
+	else 
+	{
+		grossPay = hours* PAYRATE;
+		double overTimePay = (hours - 40)* (PAYRATE *1.5);
+		grossPay += overTimePay;	
+	}
+	//calculate the taxes
+	if (grossPay <= 300)
+	{
+		taxes = grossPay * TAXRATE_300;
+	}
+	else if (grossPay > 30 && grossPay <= 450)
+	{
+		taxes = 300* TAXRATE_300;
+		taxes += (grossPay - 300)* TAXRATE_150;
+	}
+	else if (grossPay > 450)
+	{
+		taxes = 300 * TAXRATE_300;
+		taxes += 150 * TAXRATE_150;
+		taxes += (grossPay - 450)* TAXRATE_REST;
+	}
+	
+	//calculate the netpay
+	netPay = grossPay - taxes;
+	
+	//display output
+	printf ("Your gross pay this week is : %.2f\n", grossPay);
+	printf ("Your taxes this week is : %.2f", taxes);
+	printf ("Your net pay this week is : %.2f\n",netPay);
+	
+	return 0;
+}
+*/
+
+/*
+For Loop
+
+
+#include <stdio.h>
+*/
+
+/*
+While Loop 
+*/
+/* Use While Loop for Logic Controlled Loops 
+& For Loop for Counter Controlled Loops*/
+/* Break Statement*/
+
+/*
+(Challenge) Guess a Number
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h> // for random numbee generation 
+int main ()
+{
+	int randomNumber = 0;
+	int guess = 0;
+	int NumberOfGuesses = 5;
+	time_t t;
+	
+	//intialization og random number generator
+	srand ((unsigned) time(&t));
+	
+	//get a random number 
+	randomNumber = rand () %21;
+	printf ("\n This is a guessing game.");
+	printf ("\n I have chosen a number between 0 and 20, which you must guess. \n")
+	
+	for (NumberOfGuesses = 5; NumberOfGuesses > 0; -- NumberOfGuesses)
+	{
+		printf ("\n You have %d tries left." NumberOfGuesses, NumberOfGuesses == 1?)
+		printf ("\n Enter a guess:");
+		scanf ("%d",&guess);
+		
+		if (guess == randomNumber)
+		{
+			printf ("\n Congratulations. You guessed it!\n");
+			break;
+		}
+		else if (guess <0 || guess > 20)
+		printf ("This is a number between 0 and 20. \n");
+		else if (random > guess)
+		printf ("Sorry, %d is wrong. My number is greater than that.\n",guess);
+		else if (random < guess)
+		printf ("Sorry, %d is wrong. My number is less than that. \n",guess);
+		
+	}
+	printf ("\n You have had five tries and failed. The number is %d n", random);
+}
+*/
+
+/*
+Create Arrays
+
+#include <stdio.h>
+int main ()
+{
+	int grades [10];
+	int count = 10;
+	long sum = 0;
+	float average = 0.0f;
+	
+	printf ("\n Enter the 10 grades:\n");
+	//Read the numbers to be averaged
+	int i;
+	for (i=0; i< count; ++i)
+	{
+		printf ("%2u>",i+1);
+		scanf ("%d",&grades[i]);
+		sum += grades[i];
+	}
+	average = (float)sum/count;
+	printf ("\n Average of the ten grades entered is : %.2f \n", average);
+	
+	return 0;
+}
+*/
+
+/*
+Iniitialize an Array
+
+#include <stdio.h>
+
+#define MONTHS 12
+int main ()
+{
+	int days[MONTHS]= {31,28.31,30,31,30,31,31,30,31,30,31};
+	int index;
+	for (index =0; index < MONTHS; index++)
+		printf ("Month %d has %2d days. \n", index+1,days[index]);
+		
+		return 0;
+}
+*/
+
+/*
+Multidimensional Arrays
+
+#include <stdio.h>
+
+int numbers [2][3][4]={
+	{
+		{10,20,30,40},
+		{15,25,35,45},
+		{47,48,49,50},
+	},
+	{
+		{10,20,30,40},
+		{15,25,35,45},
+		{47,48,49,50},
+	}
+};
+*/
+
+/*
+Variable Length Arrarys
+*/
+
+/*
+(CHALLENGE) Generate Prime Numbers
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+
+int main ()
+{
+	int p;
+	int i;
+	
+	int primes[50]= {0};
+	int primeIndex =2;
+	
+	//hard code prime numbers
+	primes[0]= 2;
+	primes[1]= 3;
+	for (p=5; p<= 100; p= p+2)
+	{
+		isPrime = true;
+		for (i= 1; isPrime && p/ primes[i]>= primes[i];++i)
+		if (p %s primes [i]==0)
+		isPrime = false;
+		if (isPrime == true)
+		{
+			primes[primeIndex]= p;
+			++primeIndex
+		}
+	}
+	return 0;
+}
+*/
+
+/*
+Weather Program
+
+#include <stdio.h>
+#include <stdlib.h>
+
+#define MONTHS 12
+#define YEARS 5
+
+int main ()
+{
+	//initialize rainfall data for 2011-2015
+	float rain [YEARS] [MONTHS]=
+	{
+		     {4.3,4.3,4.3,3.0,2.0,1.2,0.2,0.2,0.4,2.4,3.5,6.6},
+			{8.5,8.2,1.2,1.6,2.4,0.0,5.2,0.9,0.3,0.9,1.4,7.3},
+			{9.1,8.5,6.7,4.3,2.1,0.8,0.2,0.2,1.1,2.3,6.1,8.4},
+			{7.2,9.9,8.4,3.3,1.2,0.8,0.4,0.0,0.6,1.7,4.3,6.2},
+			{7.6,5.6,3.8,2.8,3.8,0.2,0.0,0.0,0.0,1.3,2.6,5.2}
+	};
+	
+	int year, month;
+	float subtotal, total;
+	printf ("YEAR\t\tRAINFALL (inches)\n");
+	
+	for (year= 0, total = 0; year < YEARS; year++)
+	{
+		for (month = 0, subtot = 0; month < MONTHS; month++)
+		{
+			subtot += rain[year][month];
+		}
+		printf ("%5d \t\t %15.1f\n",2010+year,subtot);
+		total += subtot;
+	}
+	printf ("\n The yearly average is %.1f inches.\n\n",total/YEARS);
+}
+*/
+
+/*
+Functions
+*/
+
+/*
+parameter
+
+#include <stdio.h>
+
+void multiplyTwoNumbers (int x, int y)
+{
+	int result = x*y;
+	printf ("The product of %d multiplied by %d is : %d\n", x, y, result);
+}
+
+int main (void)
+{
+	multiplyTwoNumbers(10, 20);
+	multiplyTwoNumbers(20, 30);
+	multiplyTwoNumbers(50, 2);
+	
+	return 0;
+}
+*/
+
+/*
+Global and Local Variable
+*/
+
+/*
+Functions
+*/
+
+/*
+#include <stdio.h>
+#include <stdlib.h>
+
+int gcd(int u, int v);
+float absoluteValue(float x);
+float squareRoot(float x);
+
+int main()
+{
+	int result = 0;
+
+	float  f1 = -15.5, f2 = 20.0, f3 = -5.0;
+	int    i1 = -716;
+	float absoluteValueResult = 0.0;
+
+	result = gcd(150, 35);
+	printf("The gcd of 150 and 35 is %d\n", result);
+
+	result = gcd(1026, 405);
+	printf("The gcd of 1026 and 405 is %d\n", result);
+
+	printf("The gcd of 83 and 240 is %d\n\n\n\n", gcd(83, 240));
+
+	/* testing absolute Value Function */
+	/*
+	absoluteValueResult = absoluteValue (f1);
+	printf ("result = %.2f\n", absoluteValueResult);
+	printf ("f1 = %.2f\n", f1);
+
+	absoluteValueResult = absoluteValue (f2) + absoluteValue (f3);
+	printf ("result = %.2f\n", absoluteValueResult);
+
+	absoluteValueResult = absoluteValue ( (float) i1 );
+	printf ("result = %.2f\n", absoluteValueResult);
+
+	absoluteValueResult = absoluteValue (i1);
+	printf ("result = %.2f\n", absoluteValueResult);
+
+	printf ("%.2f\n\n\n\n", absoluteValue (-6.0) / 4 );
+
+	printf("%.2f\n", squareRoot(-3.0));
+	printf("%.2f\n", squareRoot(16.0));
+	printf("%.2f\n", squareRoot(25.0));
+	printf("%.2f\n", squareRoot(9.0));
+	printf("%.2f\n", squareRoot(225.0));
+
+
+	/* testing square root */
+
+/*
+	return 0;
+}
+
+int gcd(int u, int v)
+{
+	int temp;
+
+	while( v != 0)
+	{
+		temp = u % v;
+		u = v;
+		v = temp;
+	}
+
+	return u;
+}
+
+float squareRoot(float x)
+{
+	const  float  epsilon = .00001;
+	float  guess   = 1.0;
+	float returnValue = 0.0;
+
+	if ( x < 0 )
+	{
+		printf ("Negative argument to squareRoot.\n");
+		returnValue = -1.0;
+	}
+	else
+	{
+		while  ( absoluteValue (guess * guess - x) >= epsilon )
+		   guess = ( x / guess + guess ) / 2.0;
+
+		returnValue = guess;
+	}
+
+	return returnValue;
+}
+
+float absoluteValue(float x)
+{
+	if (x < 0)
+		x = -x;
+
+	return x;
+}
+*/
+
+/*
+Tic Tac Toe
+*/
+#include <stdio.h>
+#include <stdlib.h>
+#include <conio.h>
+
+char square[10] = { 'o', '1', '2', '3', '4', '5', '6', '7', '8', '9' };
+int choice, player;
+
+int checkForWin();
+void displayBoard();
+void markBoard(char mark);
+
+int main()
+{
+		int gameStatus;
+
+		char mark;
+
+		player = 1;
+
+		do
+		{
+			displayBoard();
+
+			// change turns
+			player = (player % 2) ? 1 : 2;
+
+			// get input
+			printf("Player %d, enter a number: ", player);
+			scanf("%d", &choice);
+
+			// set the correct character based on player turn
+			mark = (player == 1) ? 'X' : 'O';
+
+			// set board based on user choice or invalid choice
+			markBoard(mark);
+
+			gameStatus = checkForWin();
+
+			player++;
+
+		}while (gameStatus == -1);
+
+		if (gameStatus == 1)
+				printf("==>\aPlayer %d win ", --player);
+		else
+				printf("==>\aGame draw");
+
+		return 0;
+}
+
+/*********************************************
+FUNCTION TO RETURN GAME STATUS
+1 FOR GAME IS OVER WITH RESULT
+-1 FOR GAME IS IN PROGRESS
+O GAME IS OVER AND NO RESULT
+ **********************************************/
+int checkForWin()
+{
+		int returnValue = 0;
+
+		if (square[1] == square[2] && square[2] == square[3])
+		{
+				returnValue = 1;
+		}
+		else if (square[4] == square[5] && square[5] == square[6])
+				returnValue = 1;
+
+		else if (square[7] == square[8] && square[8] == square[9])
+				returnValue = 1;
+
+		else if (square[1] == square[4] && square[4] == square[7])
+				returnValue = 1;
+
+		else if (square[2] == square[5] && square[5] == square[8])
+				returnValue = 1;
+
+		else if (square[3] == square[6] && square[6] == square[9])
+				returnValue = 1;
+
+		else if (square[1] == square[5] && square[5] == square[9])
+				returnValue = 1;
+
+		else if (square[3] == square[5] && square[5] == square[7])
+				returnValue = 1;
+
+		else if (square[1] != '1' && square[2] != '2' && square[3] != '3' &&
+				square[4] != '4' && square[5] != '5' && square[6] != '6' && square[7]
+				!= '7' && square[8] != '8' && square[9] != '9')
+				returnValue = 0;
+		else
+				returnValue = -1;
+
+		return returnValue;
+}
+
+/*******************************************************************
+FUNCTION TO DRAW BOARD OF TIC TAC TOE WITH PLAYERS MARK
+ *******************************************************************/
+void displayBoard()
+{
+		system("cls");
+
+		printf("\n\n\tTic Tac Toe\n\n");
+
+		printf("Player 1 (X)  -  Player 2 (O)\n\n\n");
+
+		printf("     |     |     \n");
+		printf("  %c  |  %c  |  %c \n", square[1], square[2], square[3]);
+
+		printf("_____|_____|_____\n");
+		printf("     |     |     \n");
+
+		printf("  %c  |  %c  |  %c \n", square[4], square[5], square[6]);
+
+		printf("_____|_____|_____\n");
+		printf("     |     |     \n");
+
+		printf("  %c  |  %c  |  %c \n", square[7], square[8], square[9]);
+
+		printf("     |     |     \n\n");
+}
+
+/***************************************
+set the board with the correct character,
+x or o in the correct spot in the array
+****************************************/
+void markBoard(char mark)
+{
+		if (choice == 1 && square[1] == '1')
+				square[1] = mark;
+
+		else if (choice == 2 && square[2] == '2')
+				square[2] = mark;
+
+		else if (choice == 3 && square[3] == '3')
+				square[3] = mark;
+
+		else if (choice == 4 && square[4] == '4')
+				square[4] = mark;
+
+		else if (choice == 5 && square[5] == '5')
+				square[5] = mark;
+
+		else if (choice == 6 && square[6] == '6')
+				square[6] = mark;
+
+		else if (choice == 7 && square[7] == '7')
+				square[7] = mark;
+
+		else if (choice == 8 && square[8] == '8')
+				square[8] = mark;
+
+		else if (choice == 9 && square[9] == '9')
+				square[9] = mark;
+		else
+		{
+				printf("Invalid move ");
+
+				player--;
+				getch();
+		}
+}
+
