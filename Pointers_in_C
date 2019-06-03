@@ -1,0 +1,117 @@
+//One Extra String is for Null 
+// Scanf function
+//strcmp function
+/*
+#include <stdio.h>
+
+int main(void)
+{
+	char str1[]= "To be or not to be";
+	char str2[]= ", that is a question";
+	unsigned int count = 0; // stores the string length
+	
+	while (str1[count]!= '\0') //Increment count till we reach the 
+	++ count;                //terminating character.
+	
+	printf("The lenght of the stirng \"%s" is %d characters.\n", str1, count);
+	
+	count = 0; //Reset count for next string
+	while (str2[count]!='\0') //Count characters in second string
+	++ count
+	
+	printf ("The length of this string \"%s" is %d characters. \n", str2, count);
+	return 0;
+	
+}
+*/
+
+/*
+#include <stdio.h>
+#include <string.h>
+
+int main (){
+	char myString[]= "My Name is Zhuo Chen";
+	printf ("The length is : %d", strlen(myString));
+	
+	return 0;
+}
+*/
+
+/*
+strcmp("string","string") 
+
+char text[100];
+char substring[40];
+
+printf("Enter the string to be searched (less than %d characters):\n",100);
+scanf("%s",text);
+
+printf("\n Enter the string sought (less than %d characters):\n",40);
+scanf("%s",substring);
+
+printf ("\nFirst string entered:\n%s\n",text);
+printf ("Second string entered: \n%s\n", substring);
+
+//COnvert both strings to uppercase
+for (i=0;(text[i]=(char)_toupper(text[i]))!='\0';++i);
+for (i=0; (substring[i]=(char)toupper(substring[i]))!= '\0';++i);
+
+printf ("The second string %s found in the first. \n", ((strstr(text,substring)==NULL)?)“was not”:"was"));
+*/
+
+/*
+Demonstration
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+
+int stringlength(const char string[]);
+void concat(char result[], const char str[], cons char str1[]);
+
+int main ()
+{
+	const char word1[]= "jason";
+	const char word2[]= "OK";
+	const char word3[]= "whatever";
+	char result[50];
+	
+	printf ("%d  %d  %d\n", stringLength(word1), stringLength(word2), stringLength(word3));
+	printf ("\n%s", concat);
+	return 0;
+}
+
+int stringLength(const char string[])
+{
+	int count = 0;
+	while (string[count]!='\0')
+	
+	++ count;
+	return count;
+}
+
+void concat(char result[], const char str [], const char str1[])
+{
+	int i, j;
+	for (i= 0; str[i]!='\0';++i)
+	{
+		result [i]= str[i];
+	}
+	for (j= 0, str2[j]!='\0';++j)
+	result [i+j]='\0';
+}
+
+bool equalStrings (const char s1[], const char s2 [])
+{
+	int i = 0;
+	bool isEquals = false;
+	while (s1[i]== s2[i] &&
+	s1[i] != '\0' &&
+	s2[i] != '\0')
+	++i;
+}
+*/
+
+/*
+Call stack
+*/
